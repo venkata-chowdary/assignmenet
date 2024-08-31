@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Ignore Firebase service account key
+config/yourhr-9537d-firebase-adminsdk-om4u5-5808948a8f.json

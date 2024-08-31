@@ -14,8 +14,8 @@ const router = express.Router();
 
 
 router.post('/login', 
-    body('email').isEmail().withMessage('Please enter a valid email'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+    // body('email').isEmail().withMessage('Please enter a valid email'),
+    // body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
     async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -48,16 +48,16 @@ router.post('/login',
 
 router.post('/signup', 
     upload.single('resume'),
-    body('name').notEmpty().withMessage('Name is required'),
-    body('email').isEmail().withMessage('Please enter a valid email'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
-    body('address').notEmpty().withMessage('Address is required'),
-    body('phone').notEmpty().withMessage('Phone number is required'),
-    body('dateOfBirth').isDate().withMessage('Please enter a valid date of birth'),
-    body('gender').notEmpty().withMessage('Gender is required'),
-    body('linkedIn').optional().isURL().withMessage('LinkedIn URL is invalid'),
-    body('github').optional().isURL().withMessage('GitHub URL is invalid'),
-    body('skills').notEmpty().withMessage('Skills are required'),
+    // body('name').notEmpty().withMessage('Name is required'),
+    // body('email').isEmail().withMessage('Please enter a valid email'),
+    // body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+    // body('address').notEmpty().withMessage('Address is required'),
+    // body('phone').notEmpty().withMessage('Phone number is required'),
+    // body('dateOfBirth').isDate().withMessage('Please enter a valid date of birth'),
+    // body('gender').notEmpty().withMessage('Gender is required'),
+    // body('linkedIn').optional().isURL().withMessage('LinkedIn URL is invalid'),
+    // body('github').optional().isURL().withMessage('GitHub URL is invalid'),
+    // body('skills').notEmpty().withMessage('Skills are required'),
     async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
